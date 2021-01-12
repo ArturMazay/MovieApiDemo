@@ -30,6 +30,7 @@ class Repository(private val moviesApi: MoviesApi) {
     companion object {
         const val API_KEY = "f9a69c2690fc50b90e76792d9601d4fb"
         private const val BASE_IMAGE_URL = "https://image.tmdb.org/t/p/"
+        private const val BASE_URL = "https://api.themoviedb.org/3/"
 
     }
 }
