@@ -62,7 +62,7 @@ class MovieViewModel(private val repository: Repository) : ViewModel() {
         get() = _searchState
 
 }
-
+ // поидее можно записать все покороче(но позже)
 
 /*Широковещает последний отправленный элемент (он же значение ) всем подписчикам openSubscription .
 Элементы, отправленные обратно для отправки,
