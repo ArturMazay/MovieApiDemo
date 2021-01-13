@@ -2,12 +2,14 @@ package com.example.movieapidemo.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapidemo.R
 import com.example.movieapidemo.models.Movie
 
-class MovieAdapter(private val listMovie: List<Movie> = listOf()) :
-    RecyclerView.Adapter<MovieViewHolder>() {
+class MovieAdapter() :
+    ListAdapter<Movie,MovieViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder =
         MovieViewHolder(
@@ -16,8 +18,17 @@ class MovieAdapter(private val listMovie: List<Movie> = listOf()) :
         )
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bind(listMovie[position])
+        holder.bind(getItem(position))
     }
 
-    override fun getItemCount(): Int = listMovie.size
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Movie>() {
+            override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean =
+                oldItem.id == newItem.id
+
+            override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean =
+                oldItem == newItem
+        }
+
+    }
 }
