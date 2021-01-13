@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background_dark">#191926</color>
+    <color name="background_dark_opacity">#80191926</color>
+    <color name="text_secondary">#6D6D80</color>
+    <color name="card_background">#1E1E2B</color>
+    <color name="text_time">#565665</color>
+    <color name="rating_star_red">#FF3365</color>
+    <color name="rating_star_empty">#6D6D80</color>
+    <color name="text_light">#ECECEC</color>
+    <color name="text_gray">#6D6D80</color>
+    <color name="text_red">#FF3466</color>
+    <color name="text_light_gray">#C4C4C4</color>
+    <color name="text_white">#D8D8D8</color>
+    <color name="text_color_actor">#D8D8D8</color>
 </resources>
